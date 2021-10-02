@@ -1,0 +1,84 @@
+{
+  "name": "ublox-evk-odin-w2-gcc",
+  "version": "0.0.3",
+  "inherits": {
+    "ublox-odin-w2-gcc": "~0.0.4"
+  },
+  "description": "Official mbed build target for the mbed u-blox evk-odin-w2 development board.",
+  "licenses": [
+    {
+      "url": "https://spdx.org/licenses/Apache-2.0",
+      "type": "Apache-2.0"
+    }
+  ],
+  "keywords": [
+    "ublox-evk-odin-w2",
+    "mbed-official",
+    "c029",
+    "gcc"
+  ],
+  "similarTo": [
+    "ublox-evk-odin-w2",
+    "evk-odin-w2"
+  ],
+  "config": {
+    "mbed-os": {},
+    "hardware": {
+      "pins": {
+        "A2": "ODIN_A5",
+        "SW0": "ODIN_A6",
+        "LED_RED": "ODIN_A7",
+        "LED_GRE": "ODIN_A8",
+        "LED_BLU": "ODIN_A9",
+        "D3": "ODIN_A10",
+        "D8": "ODIN_A11",
+        "D4": "ODIN_A12",
+        "D2": "ODIN_A13",
+        "D0": "ODIN_A14",
+        "D1": "ODIN_A15",
+        "D6": "ODIN_A16",
+        "D7": "ODIN_A17",
+        "A1": "ODIN_A18",
+        "A4": "ODIN_C5",
+        "D12": "ODIN_C6",
+        "D13": "ODIN_C8",
+        "D11": "ODIN_C10",
+        "D10": "ODIN_C11",
+        "D9": "ODIN_C12",
+        "A0": "ODIN_C13",
+        "LPO_CLK": "ODIN_C16",
+        "D15": "ODIN_C17",
+        "D14": "ODIN_C18",
+        "LED1": "LED_RED",
+        "LED2": "LED_GRE",
+        "SW1": "LED_GRE",
+        "SPI_IRQ": "A4",
+        "SPI_MISO": "D12",
+        "SPI_SCK": "D13",
+        "SPI_MOSI": "D11",
+        "SPI_SSEL": "D10",
+        "SD_SSEL": "D9",
+        "I2C_SCL": "D15",
+        "I2C_SDA": "D14",
+        "USBRX": "D2",
+        "USBTX": "D8",
+        "A5":"ODIN_TP10",
+        "D5":"ODIN_TP8"
+      }
+    }
+  },
+  "scripts": {
+    "debug": [
+      "valinor",
+      "--target",
+      "odin-w2",
+      "$program"
+    ],
+    "test": [
+      "mbed_test_wrapper",
+      "--target",
+      "odin-w2",
+      "$program"
+    ]
+  }
+}
